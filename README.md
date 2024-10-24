@@ -7,10 +7,7 @@ This repository documents my hands-on experiences in **Incident Response and Inv
 
 | 🔢 **S.No** | 🛡️ **Severity** | 📅 **Date**    | 🔍 **Rule Name**         | 📄 **Event ID** | 📝 **Type**           | 🔗 **Walkthrough Link**       |
 |-------------|----------------|---------------|--------------------------|----------------|----------------------|-------------------------------|
-| 1️⃣         | ![Critical](https://img.shields.io/badge/Critical-red) | 2024-10-22    | Phishing Email        | EVT-1001       | Email Threats      | [View Walkthrough](./Critical/Phishing_Email_Investigation.md) |
-| 2️⃣         | ![High](https://img.shields.io/badge/High-orange)     | 2024-10-20    | Suspicious Network    | EVT-1002       | Network Anomaly   | [View Walkthrough](./High/Suspicious_Network_Activity.md) |
-| 3️⃣         | ![Medium](https://img.shields.io/badge/Medium-yellow) | 2024-10-18    | Failed Login Attempts | EVT-1003       | Authentication     | [View Walkthrough](./Medium/Failed_Login_Attempts.md) |
-| 4️⃣         | ![Critical](https://img.shields.io/badge/Critical-red) | 2024-10-15    | Ransomware Detected   | EVT-1004       | Malware           | [View Walkthrough](./Critical/Ransomware_Detection.md) |
+| 1️⃣         | ![Medium](https://img.shields.io/badge/Medium-yellow) | 2024-10-18    | Phishing Alert - Deceptive Mail Detected | EVT-257       | Exchange     | [View Walkthrough](https://github.com/maheavula/Incident-Investigation-Response/blob/main/Medium/SOC282%20-%20Phishing%20Alert%20-%20Deceptive%20Mail%20Detected.md) |
 
 ---
 
