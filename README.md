@@ -5,9 +5,11 @@ This repository documents my hands-on experiences in **Incident Response and Inv
 ---
 ## 📊 Dashboard Overview
 
-| 🔢 **S.No** | 🛡️ **Severity** | 📅 **Date**    | 🔍 **Rule Name**         | 📄 **Event ID** | 📝 **Type**           | 🔗 **Walkthrough Link**       |
-|-------------|----------------|---------------|--------------------------|----------------|----------------------|-------------------------------|
-| 1️⃣         | ![Medium](https://img.shields.io/badge/Medium-yellow) | 2024-10-18    | Phishing Alert - Deceptive Mail Detected | EVT-257       | Exchange     | [View Walkthrough](https://github.com/maheavula/Incident-Investigation-Response/blob/main/Medium/SOC282%20-%20Phishing%20Alert%20-%20Deceptive%20Mail%20Detected.md) |
+| 🔢 **S.No** | 🛡️ **Severity** | 📅 **Date**    | 🔍 **Rule Name**                  | 📄 **Event ID** | 📝 **Type**       | 🔗 **Walkthrough Link**       |
+|-------------|----------------|---------------|-----------------------------------|----------------|------------------|-------------------------------|
+| 1️⃣         | ![Medium](https://img.shields.io/badge/Medium-yellow) | Oct, 24, 2024, 05:57 AM  | Phishing Alert - Deceptive Mail Detected | 257       | Exchange         | [View Walkthrough](https://github.com/maheavula/Incident-Investigation-Response/blob/main/Medium/SOC282%20-%20Phishing%20Alert%20-%20Deceptive%20Mail%20Detected.md) |  
+| 2️⃣         | ![High](https://img.shields.io/badge/High-red)     | 2024-10-27, 04:05 AM | SOC104 - Malware Detected | 36             | Malware          | [View Walkthrough](https://github.com/maheavula/Incident-Investigation-Response/blob/main/High/SOC104%20-%20Malware%20Detected.md) |  
+
 
 ---
 
