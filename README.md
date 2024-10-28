@@ -11,6 +11,7 @@ This repository documents my hands-on experiences in **Incident Response and Inv
 | 2️⃣         | ![High](https://img.shields.io/badge/High-red)     | 2024-10-27, 04:05 AM | SOC104 - Malware Detected | 36             | Malware          | [View Walkthrough](https://github.com/maheavula/Incident-Investigation-Response/blob/main/High/SOC104%20-%20Malware%20Detected.md) |  
 | 3️⃣         | ![Critical](https://img.shields.io/badge/Critical-darkred) | Oct, 27, 2024, 08:55 AM | ⭐ SOC274 - Palo Alto Networks PAN-OS Command Injection Vulnerability Exploitation (CVE-2024-3400) | 249 | Web Attack      | [View Walkthrough](https://github.com/maheavula/Incident-Investigation-Response/tree/main/Critical) |  
 | 4️⃣         | ![Critical](https://img.shields.io/badge/Critical-darkred) | Oct, 28, 2024, 03:13 PM | ⭐ SOC227 - Microsoft SharePoint Server Elevation of Privilege - Possible CVE-2023-29357 Exploitation | 189 | Web Attack      | [View Walkthrough](https://github.com/maheavula/Incident-Investigation-Response/blob/main/Critical/SOC227%20-%20Microsoft%20SharePoint%20Server%20Elevation%20of%20Privilege%20-%20Possible%20CVE-2023-29357%20Exploitation.md) |  
+| 5️⃣         | ![Medium](https://img.shields.io/badge/Medium-yellow) | Oct, 28, 2024, 06:58 PM  | SOC176 - RDP Brute Force Detected | 234       | Brute Force      | [View Walkthrough](https://github.com/maheavula/Incident-Investigation-Response/blob/main/Medium/SOC176%20-%20RDP%20Brute%20Force%20Detected.md) |  
 
 
 ---
