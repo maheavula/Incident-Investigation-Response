@@ -1,74 +1,116 @@
-# SOC176 - RDP Brute Force Detected
-## Overview
+# SOC176 - RDP Brute Force Detected  
 
-![overview](https://github.com/user-attachments/assets/15cef05b-1824-426d-a651-d46ed2dd48cf)
+## Overview  
 
-hey, huys welcome back, today alert investigation is about RDP Brute force detected by security system.
-So lets start the investigation by taking ownership of the alert.
+![Overview](https://github.com/user-attachments/assets/15cef05b-1824-426d-a651-d46ed2dd48cf)  
 
-Then clikc on create case by clicking on create case button.
+This report investigates the **SOC176 - RDP Brute Force Detected** alert. The security system flagged multiple **unauthorized RDP login attempts** from an external source, indicating a possible brute force attack. The goal of this investigation is to confirm the attack and mitigate its impact.  
 
-![create case](https://github.com/user-attachments/assets/31d455a3-209a-4063-97f6-b3bcd8fc6095)
+---
 
-So start with clicking on start playbook to find the answers for many questions.
+## Investigation Steps  
 
-![incident details](https://github.com/user-attachments/assets/4e53f1ee-325e-411f-bcc6-18e36bbbe2c7)
+### 1. **Taking Ownership and Creating a Case**  
+Start by **taking ownership** of the alert. Next, **create a case** by clicking the **"Create Case"** button, which redirects you to the **Case Management** page to initiate the investigation.  
 
-Initially we need to find that whether the enrinchment and context is external or internal, as the source ip address is from extrernal, click on external.
+![Create Case](https://github.com/user-attachments/assets/31d455a3-209a-4063-97f6-b3bcd8fc6095)  
 
-![context](https://github.com/user-attachments/assets/c9539205-2ffd-4e69-87fc-1f378d3c4aac)
+Click **"Start Playbook"** to begin the investigation.  
 
-Then finding the reputaution checking of Source ip address in various sites, from letsdefend treat intell found it as malicious
-![treat intell](https://github.com/user-attachments/assets/f1e282e1-c7aa-49b0-99d9-f95b60a491b7)
+![Incident Details](https://github.com/user-attachments/assets/4e53f1ee-325e-411f-bcc6-18e36bbbe2c7)  
 
-And from virustotal 14 vendors flagged this ip address as malicious.
-![virustotal](https://github.com/user-attachments/assets/b5ded556-79ac-4e02-a44f-37eae0089817)
+---
 
-And finally from abuseipdb site, it gave abuse percentage as 100 and this ip address found more than 4 lakh times in their database.
-It has bad reputation.
+### 2. **Determining Source Context**  
+The first step is to determine if the **source IP address** is **external or internal**. As the IP address is from an **external source**, select **"External"**.  
 
-![abusipdb](https://github.com/user-attachments/assets/aa392d71-ee84-4670-a769-10ae1da6e832)
+![Context](https://github.com/user-attachments/assets/c9539205-2ffd-4e69-87fc-1f378d3c4aac)  
 
-click on yes as it is suspicious.
-Now look at log management for any logs that attacker ip was there in logs regarding of RDP protocol.
+---
 
-![traffic analysis](https://github.com/user-attachments/assets/f9f7fd52-7f7c-4704-9df3-3f769c7cdf65)
+### 3. **Reputation Check of Source IP Address**  
+Perform a **reputation check** for the source IP address using various threat intelligence platforms:  
+- **LetsDefend**: Flagged the IP as **malicious**.  
+![Threat Intel](https://github.com/user-attachments/assets/f1e282e1-c7aa-49b0-99d9-f95b60a491b7)  
 
-Yes there are logs related to bruteforcing the RDP login into the system remotely, tried to login with many times wth different usernames and passwords, finally at some point
-the attack was successful with logon.
+- **VirusTotal**: 14 vendors identified the IP as **malicious**.  
+![VirusTotal](https://github.com/user-attachments/assets/b5ded556-79ac-4e02-a44f-37eae0089817)  
 
-![determine scope](https://github.com/user-attachments/assets/aa5563f1-bfb0-42da-a5d8-cae87daf3968)
+- **AbuseIPDB**: Reported that the IP has been found over **400,000 times** in its database with a **100% abuse rating**.  
+![AbuseIPDB](https://github.com/user-attachments/assets/aa392d71-ee84-4670-a769-10ae1da6e832)  
 
-Does the Attacker IP address try to establish an SSH/RDP connection with multiple servers/clients as the target? As the attacker IP address only targets the one system, click on NO.
+Select **"Yes"** to confirm that the IP address is suspicious.  
 
-![log management](https://github.com/user-attachments/assets/1cca3e9c-92b7-49ea-aa33-9b46596904bd)
-there are logs related to bruteforcing the RDP login into the system remotely, tried to login with many times wth different usernames and passwords, finally at some point
-the attack was successful with evemt id 4624. Click on yes.
+---
 
+### 4. **Traffic Analysis for RDP Brute Force Attempts**  
+Review **log management** for evidence of the attacker's activity on **RDP protocol**.  
 
-![isolated](https://github.com/user-attachments/assets/173ee49a-0034-4af8-a06d-d940257c74f3)
+![Traffic Analysis](https://github.com/user-attachments/assets/f9f7fd52-7f7c-4704-9df3-3f769c7cdf65)  
 
-Systems exposed to a cyber-attack should be isolated to reduce the impact of the cyber-attack.  Yes it is necessary to isolate to restrict the exposing the data.
+Logs indicate that multiple **RDP login attempts** were made using different **usernames and passwords**. Eventually, one attempt was **successful**, granting the attacker access to the system.  
 
-So contain the device to restrict the breach the data.
-![containment](https://github.com/user-attachments/assets/8f3ec9f3-9d47-4857-b65d-2a4fd477c7c0)
+---
 
-There is post incident phase which is lessons learned, 
-How did the cyber attack happen?
-How well did staff and management perform in dealing with the incident?
-What would the staff and management do differently the next time a similar incident occurs?
-What corrective actions can prevent similar incidents in the future?
-What precursors or indicators should be watched for in the future to detect similar incidents?
+### 5. **Scope of the Attack**  
+Determine if the attacker attempted to access **multiple systems**. In this case, the **attacker only targeted a single system**. Therefore, select **"No"**.  
 
-Enter artifacts, here only two are there src and dst ip addresses.
+![Determine Scope](https://github.com/user-attachments/assets/aa5563f1-bfb0-42da-a5d8-cae87daf3968)  
 
-Analysis note, Analysis confirmed that the brute force attack was successful, there were many attempts to login into system using RDP protocol, and contain system to restrict the data expose.
+---
 
-![finish playbook](https://github.com/user-attachments/assets/c52f6cdf-7d68-4282-ab2f-51e786347436)
+### 6. **Confirming Successful Login**  
+The logs show that the **RDP brute force attack** resulted in a **successful login** with **Event ID 4624**.  
 
-So finally the playbook has finished the investigation process and found that it is real alert. click on finish.
+![Log Management](https://github.com/user-attachments/assets/1cca3e9c-92b7-49ea-aa33-9b46596904bd)  
 
-![close alert](https://github.com/user-attachments/assets/bf9ac198-28df-4554-96b5-3797b2855ce2)
+Select **"Yes"** to confirm the successful login.  
 
-Click on true positive of the option and write some note, the alert is true.
+---
 
+### 7. **Isolating the Affected System**  
+Since the attack was successful, it is necessary to **isolate the system** to prevent further data exposure.  
+
+![Isolated](https://github.com/user-attachments/assets/173ee49a-0034-4af8-a06d-d940257c74f3)  
+
+Perform **containment** through **endpoint security** to restrict access and mitigate the impact.  
+
+![Containment](https://github.com/user-attachments/assets/8f3ec9f3-9d47-4857-b65d-2a4fd477c7c0)  
+
+---
+
+### 8. **Post-Incident Lessons Learned**  
+Document the following **post-incident lessons learned**:  
+- **How did the attack occur?**  
+- **How well did staff and management respond?**  
+- **What changes should be made to prevent future incidents?**  
+- **What indicators should be monitored going forward?**  
+
+Enter relevant **artifacts**, including **source IP** and **destination IP**, into the system.  
+
+---
+
+### 9. **Analysis Note**  
+**Analysis Summary**:  
+- The **RDP brute force attack** was confirmed to be **successful**.  
+- The attacker made multiple login attempts before finally gaining access.  
+- The affected system has been **contained** to prevent further data exposure.  
+
+![Finish Playbook](https://github.com/user-attachments/assets/c52f6cdf-7d68-4282-ab2f-51e786347436)  
+
+---
+
+### 10. **Completing the Playbook and Closing the Alert**  
+Click **"Finish Playbook"** to conclude the investigation process.  
+
+![Close Alert](https://github.com/user-attachments/assets/bf9ac198-28df-4554-96b5-3797b2855ce2)  
+
+Select **"True Positive"** and enter a **note** confirming that the alert was valid. Finally, close the alert.  
+
+---
+
+## Conclusion  
+
+This investigation confirms that the **SOC176 - RDP Brute Force Detected** alert is a **true positive**. The attacker successfully gained access through **RDP protocol** using brute force. The affected system was **contained** to prevent further compromise, and post-incident actions were documented to improve future response.  
+
+Stay vigilant and continue monitoring for similar activity.  
