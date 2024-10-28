@@ -10,6 +10,7 @@ This repository documents my hands-on experiences in **Incident Response and Inv
 | 1️⃣         | ![Medium](https://img.shields.io/badge/Medium-yellow) | Oct, 24, 2024, 05:57 AM  | Phishing Alert - Deceptive Mail Detected | 257       | Exchange         | [View Walkthrough](https://github.com/maheavula/Incident-Investigation-Response/blob/main/Medium/SOC282%20-%20Phishing%20Alert%20-%20Deceptive%20Mail%20Detected.md) |  
 | 2️⃣         | ![High](https://img.shields.io/badge/High-red)     | 2024-10-27, 04:05 AM | SOC104 - Malware Detected | 36             | Malware          | [View Walkthrough](https://github.com/maheavula/Incident-Investigation-Response/blob/main/High/SOC104%20-%20Malware%20Detected.md) |  
 | 3️⃣         | ![Critical](https://img.shields.io/badge/Critical-darkred) | Oct, 27, 2024, 08:55 AM | ⭐ SOC274 - Palo Alto Networks PAN-OS Command Injection Vulnerability Exploitation (CVE-2024-3400) | 249 | Web Attack      | [View Walkthrough](https://github.com/maheavula/Incident-Investigation-Response/tree/main/Critical) |  
+| 4️⃣         | ![Critical](https://img.shields.io/badge/Critical-darkred) | Oct, 28, 2024, 03:13 PM | ⭐ SOC227 - Microsoft SharePoint Server Elevation of Privilege - Possible CVE-2023-29357 Exploitation | 189 | Web Attack      | [View Walkthrough](https://github.com/maheavula/Incident-Investigation-Response/blob/main/Critical/SOC227%20-%20Microsoft%20SharePoint%20Server%20Elevation%20of%20Privilege%20-%20Possible%20CVE-2023-29357%20Exploitation.md) |  
 
 
 ---
