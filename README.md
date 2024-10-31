@@ -14,6 +14,7 @@ This repository documents my hands-on experiences in **Incident Response and Inv
 | 5️⃣         | ![Medium](https://img.shields.io/badge/Medium-yellow) | Oct, 28, 2024, 06:58 PM  | SOC176 - RDP Brute Force Detected | 234       | Brute Force      | [View Walkthrough](https://github.com/maheavula/Incident-Investigation-Response/blob/main/Medium/SOC176%20-%20RDP%20Brute%20Force%20Detected.md) |  
 | 6️⃣         | ![High](https://img.shields.io/badge/High-red) | Oct, 29, 2024, 05:00 AM  | SOC202 - FakeGPT Malicious Chrome Extension | 153       | Data Leakage    | [View Walkthrough](https://github.com/maheavula/Incident-Investigation-Response/blob/main/High/SOC202%20-%20FakeGPT%20Malicious%20Chrome%20Extension.md) |  
 | 7️⃣         | ![Medium](https://img.shields.io/badge/Medium-yellow) | Oct, 29, 2024, 08:27 AM  | SOC251 - Quishing Detected (QR Code Phishing) | 214       | Exchange         | [View Walkthrough](https://github.com/maheavula/Incident-Investigation-Response/blob/main/Medium/SOC251%20-%20Quishing%20Detected%20(QR%20Code%20Phishing).md) |  
+| 8️⃣         | ![Medium](https://img.shields.io/badge/Medium-yellow) | Oct, 31, 2024, 06:56 AM  | ⭐ SOC173 - Follina 0-Day Detected | 123       | Malware          | [View Walkthrough](https://github.com/maheavula/Incident-Investigation-Response/blob/main/Medium/SOC173%20-%20Follina%200-Day%20Detected.md) |  
 
 
 ---
